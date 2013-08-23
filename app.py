@@ -106,7 +106,10 @@ def post_random(id, length):
     #Chosen by fair die roll. Guaranteed to be random.
     rng = "".join("4" for x in xrange(length))
     log.debug("Random number: %s" % repr(rng))
-    return OrderedDict([("random", rng),("other", PebbleInteger(0,4),("other2", PebbleInteger(1,4)))])
+    return OrderedDict([("random", rng),
+                        ("other", PebbleInteger(0,4)),
+                        ("other2", PebbleInteger(1,4))
+                       ])
 
 if __name__=="__main__":
     bottle.debug(True)
